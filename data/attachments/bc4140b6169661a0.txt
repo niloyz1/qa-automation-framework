@@ -1,0 +1,1 @@
+{"revenue_musd": 42, "growth_pct": 12

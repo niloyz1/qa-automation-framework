@@ -1,0 +1,5 @@
+groundedness      FAIL (score 0.00): unsupported: 'Northwind Analytics reported record revenue of 58 million dollars after acquiring Contoso.' (not in source: record, 58, after, acquiring, contoso.); unsupported: 'The CEO announced layoffs across the European offices.' (not in source: ceo, announced, layoffs, across, european)
+invented numbers  FAIL (score 0.00): number not in source: 58
+pii               PASS (score 1.00)
+prompt injection  PASS (score 1.00)
+length            PASS (score 1.00)
