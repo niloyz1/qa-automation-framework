@@ -39,7 +39,8 @@ LOCATORS: dict[str, dict[str, tuple[str, str]]] = {
     },
     "cart_badge": {
         "android": (AppiumBy.ID, ANDROID_PKG + "cartTV"),
-        "ios": (AppiumBy.IOS_PREDICATE, "type == 'XCUIElementTypeStaticText' AND label ENDSWITH ' Items'"),
+        # 'N Items' only: the cart screen also holds a hidden "No Items" label for the empty state.
+        "ios": (AppiumBy.IOS_PREDICATE, "type == 'XCUIElementTypeStaticText' AND label MATCHES '[0-9]+ Items'"),
     },
     "cart_icon": {
         "android": (AppiumBy.ID, ANDROID_PKG + "cartIV"),
@@ -70,6 +71,16 @@ class BaseScreen:
 
     def tap(self, key: str) -> None:
         self.wait.until(EC.element_to_be_clickable(self.locator(key))).click()
+
+    def scroll_to(self, key: str) -> None:
+        """Bring an element on screen first; Android doesn't render views below the fold."""
+        strategy, value = self.locator(key)
+        if self.platform == "android" and strategy == AppiumBy.ID:
+            self.driver.find_element(
+                AppiumBy.ANDROID_UIAUTOMATOR,
+                "new UiScrollable(new UiSelector().scrollable(true))"
+                f'.scrollIntoView(new UiSelector().resourceId("{value}"))',
+            )
 
     @staticmethod
     def text_of(element) -> str:
@@ -102,6 +113,7 @@ class CatalogScreen(BaseScreen):
 class ProductScreen(BaseScreen):
     def add_to_cart(self) -> None:
         with allure.step("Tap Add To Cart"):
+            self.scroll_to("add_to_cart")
             self.tap("add_to_cart")
 
 
