@@ -1,0 +1,22 @@
+# Python
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+.ruff_cache/
+
+# Test output
+reports/
+test-results/
+allure-report/
+*.log
+
+# Mobile app binaries (downloaded by scripts/get_apps.py)
+apps/
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+.claude/

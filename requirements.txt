@@ -1,0 +1,23 @@
+# Test runner + BDD
+pytest==9.2.0
+pytest-bdd==9.0.1
+pytest-xdist==3.8.0
+pytest-rerunfailures==16.7
+
+# Web
+playwright==1.65.2
+pytest-playwright==0.10.0
+
+# Mobile
+Appium-Python-Client==6.1.7
+
+# API + data
+requests==2.34.2
+jsonschema==4.26.0
+PyYAML==6.0.3
+
+# Reporting
+allure-pytest-bdd==2.16.2
+
+# Code quality
+ruff==0.17.5

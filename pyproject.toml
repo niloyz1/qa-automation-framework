@@ -1,0 +1,39 @@
+[project]
+name = "qa-automation-framework"
+version = "1.0.0"
+description = "BDD test automation framework for web, mobile, API, and LLM evaluation (Python, Playwright, Appium, pytest-bdd, Allure)."
+requires-python = ">=3.11"
+authors = [{ name = "Niloy Zaman" }]
+license = { text = "MIT" }
+
+[tool.pytest.ini_options]
+# Run with: pytest  (see README for common options)
+addopts = [
+  "-ra",
+  "--strict-markers",
+  "--alluredir=reports/allure-results",
+]
+testpaths = ["tests"]
+bdd_features_base_dir = "features/"
+markers = [
+  "web: browser tests (Playwright)",
+  "mobile: native app tests (Appium)",
+  "android: Android-only mobile tests",
+  "ios: iOS-only mobile tests",
+  "api: HTTP/REST API tests",
+  "llm: LLM output evaluation tests",
+  "smoke: fast critical-path checks, run on every push",
+  "regression: full coverage, run nightly",
+  "portfolio: tests against niloyzaman.com",
+  "saucedemo: tests against saucedemo.com",
+  "negative: error and edge-case scenarios",
+]
+filterwarnings = ["ignore::DeprecationWarning"]
+
+[tool.ruff]
+line-length = 120
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP", "SIM"]
+ignore = ["SIM905"]  # word lists read better as "a b c".split()

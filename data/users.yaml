@@ -1,0 +1,13 @@
+# Public demo accounts published on https://www.saucedemo.com for test-automation practice.
+# They are not secrets. Real projects should read credentials from environment variables or a vault.
+password: secret_sauce
+users:
+  standard: standard_user
+  locked_out: locked_out_user
+  problem: problem_user
+  performance_glitch: performance_glitch_user
+
+shopper:
+  first_name: Test
+  last_name: Shopper
+  postal_code: "10001"

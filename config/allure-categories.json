@@ -1,0 +1,6 @@
+[
+  { "name": "Product defects (assertion failed)", "matchedStatuses": ["failed"], "messageRegex": ".*(AssertionError|Locator expected|expected).*" },
+  { "name": "Timeouts (slow or missing element)", "matchedStatuses": ["broken", "failed"], "messageRegex": ".*(Timeout|TimeoutException|timed out).*" },
+  { "name": "Network / environment problems", "matchedStatuses": ["broken"], "messageRegex": ".*(ConnectionError|net::ERR|Max retries exceeded|503|502).*" },
+  { "name": "Test code errors", "matchedStatuses": ["broken"] }
+]

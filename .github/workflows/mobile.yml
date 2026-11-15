@@ -1,0 +1,95 @@
+name: Mobile tests
+
+# Mobile runs need emulators/simulators, so they are started manually:
+# Actions tab -> "Mobile tests" -> Run workflow.
+on:
+  workflow_dispatch:
+    inputs:
+      platform:
+        description: Platform
+        type: choice
+        options: [both, android, ios]
+        default: both
+
+jobs:
+  android:
+    if: inputs.platform != 'ios'
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v7
+        with:
+          python-version: "3.12"
+          cache: pip
+      - uses: actions/setup-node@v7
+        with:
+          node-version: "22"
+      - name: Enable KVM (hardware acceleration for the emulator)
+        run: |
+          echo 'KERNEL=="kvm", GROUP="kvm", MODE="0666", OPTIONS+="static_node=kvm"' | sudo tee /etc/udev/rules.d/99-kvm4all.rules
+          sudo udevadm control --reload-rules && sudo udevadm trigger --name-match=kvm
+      - run: pip install -r requirements.txt
+      - run: npm install -g appium && appium driver install uiautomator2
+      - run: python scripts/get_apps.py android
+      - name: Run Android suite on an emulator
+        uses: reactivecircus/android-emulator-runner@v2
+        with:
+          api-level: 34
+          arch: x86_64
+          target: google_apis
+          emulator-options: -no-window -gpu swiftshader_indirect -noaudio -no-boot-anim
+          script: |
+            appium --log appium.log &
+            sleep 10
+            pytest -m mobile --platform android
+      - uses: actions/upload-artifact@v7
+        if: always()
+        with:
+          name: mobile-android-results
+          path: |
+            reports/allure-results
+            appium.log
+
+  ios:
+    if: inputs.platform != 'android'
+    runs-on: macos-15
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v7
+        with:
+          python-version: "3.12"
+          cache: pip
+      - uses: actions/setup-node@v7
+        with:
+          node-version: "22"
+      - run: pip install -r requirements.txt
+      - run: npm install -g appium && appium driver install xcuitest
+      - run: python scripts/get_apps.py ios
+      - name: Pick an available iPhone simulator
+        run: |
+          DEVICE=$(xcrun simctl list devices available | grep -m1 -oE "iPhone [0-9]+( Pro)?" )
+          RUNTIME=$(xcrun simctl list runtimes | grep -m1 -oE "iOS [0-9]+\.[0-9]+" | cut -d' ' -f2)
+          echo "Using $DEVICE on iOS $RUNTIME"
+          echo "IOS_DEVICE=$DEVICE" >> "$GITHUB_ENV"
+          echo "IOS_VERSION=$RUNTIME" >> "$GITHUB_ENV"
+      - name: Run iOS suite on a simulator
+        run: |
+          python - <<'EOF'
+          import os, yaml, pathlib
+          p = pathlib.Path("config/environments.yaml"); cfg = yaml.safe_load(p.read_text())
+          cfg["prod"]["mobile"]["ios"]["device_name"] = os.environ["IOS_DEVICE"]
+          cfg["prod"]["mobile"]["ios"]["platform_version"] = os.environ["IOS_VERSION"]
+          p.write_text(yaml.safe_dump(cfg, sort_keys=False))
+          EOF
+          appium --log appium.log &
+          sleep 10
+          pytest -m mobile --platform ios
+      - uses: actions/upload-artifact@v7
+        if: always()
+        with:
+          name: mobile-ios-results
+          path: |
+            reports/allure-results
+            appium.log

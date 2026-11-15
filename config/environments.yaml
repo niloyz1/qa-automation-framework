@@ -1,0 +1,43 @@
+# One block per environment. Pick one with:  TEST_ENV=prod pytest   (default: prod)
+# Any value can be overridden by an environment variable, e.g. SAUCEDEMO_URL=https://... pytest
+
+prod:
+  portfolio_url: https://niloyzaman.com
+  saucedemo_url: https://www.saucedemo.com
+  api_url: https://jsonplaceholder.typicode.com
+  timeouts:
+    default_ms: 10000
+    navigation_ms: 30000
+  mobile:
+    appium_url: http://127.0.0.1:4723
+    android:
+      app: apps/mda-2.3.0-27.apk          # downloaded by scripts/get_apps.py
+      device_name: Android Emulator
+      app_package: com.saucelabs.mydemoapp.android
+      app_activity: .view.activities.SplashActivity
+    ios:
+      app: apps/SauceLabs-Demo-App.app    # unzipped by scripts/get_apps.py
+      device_name: iPhone 16
+      platform_version: "18.5"
+      bundle_id: com.saucelabs.mydemoapp.ios
+
+staging:
+  # Example of a second environment: same apps, different URLs/timeouts.
+  portfolio_url: http://localhost:8000
+  saucedemo_url: https://www.saucedemo.com
+  api_url: https://jsonplaceholder.typicode.com
+  timeouts:
+    default_ms: 15000
+    navigation_ms: 45000
+  mobile:
+    appium_url: http://127.0.0.1:4723
+    android:
+      app: apps/mda-2.3.0-27.apk
+      device_name: Android Emulator
+      app_package: com.saucelabs.mydemoapp.android
+      app_activity: .view.activities.SplashActivity
+    ios:
+      app: apps/SauceLabs-Demo-App.app
+      device_name: iPhone 16
+      platform_version: "18.5"
+      bundle_id: com.saucelabs.mydemoapp.ios
