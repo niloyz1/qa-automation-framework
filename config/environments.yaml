@@ -19,7 +19,7 @@ prod:
       app: apps/SauceLabs-Demo-App.app    # unzipped by scripts/get_apps.py
       device_name: iPhone 16
       platform_version: "18.5"
-      bundle_id: com.saucelabs.mydemoapp.ios
+      bundle_id: com.saucelabs.mydemo.app.ios
 
 staging:
   # Example of a second environment: same apps, different URLs/timeouts.
@@ -40,4 +40,4 @@ staging:
       app: apps/SauceLabs-Demo-App.app
       device_name: iPhone 16
       platform_version: "18.5"
-      bundle_id: com.saucelabs.mydemoapp.ios
+      bundle_id: com.saucelabs.mydemo.app.ios

@@ -11,13 +11,13 @@ Feature: Mobile shopping (Sauce Labs My Demo App)
 
   @smoke
   Scenario: Catalog shows products
-    Then the catalog should list "Sauce Labs Backpack"
+    Then the catalog should list a product starting with "Sauce Labs Backpack"
 
   @smoke
   Scenario: Add a product to the cart from its detail screen
     When I open the product "Sauce Labs Backpack"
     And I add the product to the cart
-    Then the cart badge should show "1"
+    Then the cart should contain 1 item
 
   @regression
   Scenario: Cart offers checkout

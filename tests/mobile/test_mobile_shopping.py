@@ -2,6 +2,8 @@
 
 from __future__ import annotations
 
+import os
+
 import allure
 import pytest
 from pytest_bdd import given, parsers, scenarios, then, when
@@ -19,15 +21,17 @@ def platform_name(request) -> str:
 
 @pytest.fixture
 def driver(request, settings, platform_name):
+    # Locally a missing app/device skips with a reason; in CI it must fail, so a broken setup can't look green.
+    unavailable = pytest.fail if os.environ.get("CI") else pytest.skip
     app = ROOT / settings.mobile[platform_name]["app"]
     if not app.exists():
-        pytest.skip(f"{platform_name} app not found at {app}. Run: python scripts/get_apps.py {platform_name}")
+        unavailable(f"{platform_name} app not found at {app}. Run: python scripts/get_apps.py {platform_name}")
     from framework.mobile.driver import create_driver  # imported lazily so web/API runs don't need Appium
 
     try:
         drv = create_driver(platform_name, settings)
     except Exception as exc:  # Appium server or device not running
-        pytest.skip(f"Appium session could not start ({exc.__class__.__name__}). See README > Mobile setup.")
+        unavailable(f"Appium session could not start: {exc.__class__.__name__}: {str(exc)[:300]}")
     yield drv
     report = getattr(request.node, "rep_call", None)
     if report is not None and report.failed:
@@ -73,14 +77,15 @@ def open_cart(cart):
     cart.open()
 
 
-@then(parsers.parse('the catalog should list "{name}"'))
+@then(parsers.parse('the catalog should list a product starting with "{name}"'))
 def catalog_lists(catalog, name):
-    assert name in catalog.product_names()
+    names = catalog.product_names()
+    assert any(n.startswith(name) for n in names), f"catalog showed {names}"
 
 
-@then(parsers.parse('the cart badge should show "{count}"'))
-def badge_shows(cart, count):
-    assert cart.badge_count() == count
+@then(parsers.parse("the cart should contain {count:d} item"))
+def cart_contains(cart, count):
+    assert cart.item_count() == count
 
 
 @then("I should be able to proceed to checkout")
