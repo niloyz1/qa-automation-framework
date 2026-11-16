@@ -33,6 +33,11 @@ jobs:
       - run: npm install -g appium && appium driver install uiautomator2
       - run: python scripts/get_apps.py android
       - name: Run Android suite on an emulator
+        id: android_suite
+        # The emulator can hang on shutdown after the tests finish. Cap the step and let
+        # the "Android test result" step below decide pass/fail from pytest's real exit code.
+        timeout-minutes: 15
+        continue-on-error: true
         uses: reactivecircus/android-emulator-runner@v2
         with:
           api-level: 34
@@ -50,8 +55,15 @@ jobs:
             appium --log appium.log &
             sleep 10
             pytest -m mobile --platform android; echo $? > pytest-exit-code
-            pkill -9 -f qemu-system || true
+            pkill -9 -f qemu-system || true; pkill -9 -f netsimd || true; pkill -9 -f "sdk/emulator/emulator" || true
             exit $(cat pytest-exit-code)
+      - name: Android test result
+        if: always()
+        run: |
+          if [ ! -f pytest-exit-code ]; then echo "::error::Android tests did not run"; exit 1; fi
+          code=$(cat pytest-exit-code)
+          echo "pytest exit code: $code"
+          exit "$code"
       - uses: actions/upload-artifact@v7
         if: always()
         with:
