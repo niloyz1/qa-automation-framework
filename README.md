@@ -1,6 +1,7 @@
 # QA Automation Framework
 
 [![Tests](https://github.com/niloyz1/qa-automation-framework/actions/workflows/tests.yml/badge.svg)](https://github.com/niloyz1/qa-automation-framework/actions/workflows/tests.yml)
+[![Mobile tests](https://github.com/niloyz1/qa-automation-framework/actions/workflows/mobile.yml/badge.svg)](https://github.com/niloyz1/qa-automation-framework/actions/workflows/mobile.yml)
 [![Allure report](https://img.shields.io/badge/report-Allure-6740cc)](https://niloyz1.github.io/qa-automation-framework/)
 ![Python](https://img.shields.io/badge/python-3.11%2B-3776ab)
 ![Playwright](https://img.shields.io/badge/Playwright-1.65-2ead33)
