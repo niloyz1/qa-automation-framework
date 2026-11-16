@@ -32,6 +32,8 @@ def driver(request, settings, platform_name):
         drv = create_driver(platform_name, settings)
     except Exception as exc:  # Appium server or device not running
         unavailable(f"Appium session could not start: {exc.__class__.__name__}: {str(exc)[:300]}")
+    if platform_name == "android":
+        _dismiss_system_dialogs(drv, settings.mobile["android"]["app_package"])
     yield drv
     report = getattr(request.node, "rep_call", None)
     if report is not None and report.failed:
@@ -40,6 +42,23 @@ def driver(request, settings, platform_name):
         )
         allure.attach(drv.page_source, name="UI hierarchy", attachment_type=allure.attachment_type.XML)
     drv.quit()
+
+
+def _dismiss_system_dialogs(drv, app_package: str) -> None:
+    """Close Android 'X isn't responding' dialogs (common on freshly booted emulators), then refocus the app."""
+    from appium.webdriver.common.appiumby import AppiumBy
+
+    dismissed = False
+    for _ in range(3):
+        buttons = drv.find_elements(AppiumBy.ID, "android:id/aerr_wait") or drv.find_elements(
+            AppiumBy.ID, "android:id/aerr_close"
+        )
+        if not buttons:
+            break
+        buttons[0].click()
+        dismissed = True
+    if dismissed:
+        drv.activate_app(app_package)
 
 
 @pytest.fixture
