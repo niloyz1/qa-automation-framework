@@ -1,190 +1,190 @@
 "DESCRIPTION","DURATION IN MS","NAME","PARENT SUITE","START TIME","STATUS","STOP TIME","SUB SUITE","SUITE","TEST CLASS","TEST METHOD"
+"As the owner of a QA portfolio
+I want its interactive features covered by automated tests
+So that the site I send to recruiters always works","2261","The AI evaluator scores model answers correctly","","2026-11-22","passed","2026-11-22","","","",""
+"As a shopper on Swag Labs (saucedemo.com)
+I want to log in with my account
+So that I can browse and buy products","294","Standard user logs in successfully","","2026-11-22","passed","2026-11-22","","","",""
 "As a logged-in shopper
 I want to manage my cart and check out
-So that I can complete a purchase","1089","Sort products","","2026-11-21","passed","2026-11-21","","","",""
+So that I can complete a purchase","1186","Sort products","","2026-11-22","passed","2026-11-22","","","",""
+"As the owner of a QA portfolio
+I want its interactive features covered by automated tests
+So that the site I send to recruiters always works","1538","The terminal answers commands","","2026-11-22","passed","2026-11-22","","","",""
+"As a QA engineer validating a generative AI summarization feature
+I want every recorded model answer scored by deterministic evaluators
+So that hallucinations, PII leaks, and prompt injections are caught before release","4","A faithful summary passes every check","","2026-11-22","passed","2026-11-22","","","",""
 "As a client of the posts service (jsonplaceholder.typicode.com)
 I want its endpoints to honour their contract
-So that consumers can rely on status codes, schemas, and response times","77","List posts for a user","","2026-11-21","passed","2026-11-21","","","",""
-"As the owner of a QA portfolio
-I want its interactive features covered by automated tests
-So that the site I send to recruiters always works","1157","The terminal answers commands","","2026-11-21","passed","2026-11-21","","","",""
+So that consumers can rely on status codes, schemas, and response times","14","Unknown resources return 404","","2026-11-22","passed","2026-11-22","","","",""
 "As a shopper on Swag Labs (saucedemo.com)
 I want to log in with my account
-So that I can browse and buy products","789","Login form validation","","2026-11-21","passed","2026-11-21","","","",""
+So that I can browse and buy products","632","Login form validation","","2026-11-22","passed","2026-11-22","","","",""
 "As a logged-in shopper
 I want to manage my cart and check out
-So that I can complete a purchase","1229","Sort products","","2026-11-21","passed","2026-11-21","","","",""
-"As a logged-in shopper
-I want to manage my cart and check out
-So that I can complete a purchase","1744","Remove a product from the cart","","2026-11-21","passed","2026-11-21","","","",""
-"As the owner of a QA portfolio
-I want its interactive features covered by automated tests
-So that the site I send to recruiters always works","539","Home page loads with a single main heading and navigation","","2026-11-21","passed","2026-11-21","","","",""
+So that I can complete a purchase","891","Sort products","","2026-11-22","passed","2026-11-22","","","",""
 "As a shopper on Swag Labs (saucedemo.com)
 I want to log in with my account
-So that I can browse and buy products","855","Login form validation","","2026-11-21","passed","2026-11-21","","","",""
-"As a shopper on Swag Labs (saucedemo.com)
-I want to log in with my account
-So that I can browse and buy products","1893","Login form validation","","2026-11-21","passed","2026-11-21","","","",""
-"As a logged-in shopper
-I want to manage my cart and check out
-So that I can complete a purchase","759","Checkout requires a first name","","2026-11-21","passed","2026-11-21","","","",""
+So that I can browse and buy products","1497","Login form validation","","2026-11-22","passed","2026-11-22","","","",""
 "As the owner of a QA portfolio
 I want its interactive features covered by automated tests
-So that the site I send to recruiters always works","1083","The terminal answers commands","","2026-11-21","passed","2026-11-21","","","",""
+So that the site I send to recruiters always works","2476","Theme preference can be switched","","2026-11-22","passed","2026-11-22","","","",""
 "As the owner of a QA portfolio
 I want its interactive features covered by automated tests
-So that the site I send to recruiters always works","3015","The AI evaluator scores model answers correctly","","2026-11-21","passed","2026-11-21","","","",""
-"As a shopper on Swag Labs (saucedemo.com)
-I want to log in with my account
-So that I can browse and buy products","460","Login form validation","","2026-11-21","passed","2026-11-21","","","",""
-"As a logged-in shopper
-I want to manage my cart and check out
-So that I can complete a purchase","799","Sort products","","2026-11-21","passed","2026-11-21","","","",""
-"As a logged-in shopper
-I want to manage my cart and check out
-So that I can complete a purchase","1460","Checkout requires a first name","","2026-11-21","passed","2026-11-21","","","",""
+So that the site I send to recruiters always works","1333","The terminal answers commands","","2026-11-22","passed","2026-11-22","","","",""
 "As a client of the posts service (jsonplaceholder.typicode.com)
 I want its endpoints to honour their contract
-So that consumers can rely on status codes, schemas, and response times","37","Get a single post","","2026-11-21","passed","2026-11-21","","","",""
+So that consumers can rely on status codes, schemas, and response times","103","Get a single post","","2026-11-22","passed","2026-11-22","","","",""
+"As a logged-in shopper
+I want to manage my cart and check out
+So that I can complete a purchase","925","Sort products","","2026-11-22","passed","2026-11-22","","","",""
 "As a shopper on Swag Labs (saucedemo.com)
 I want to log in with my account
-So that I can browse and buy products","507","Login form validation","","2026-11-21","passed","2026-11-21","","","",""
+So that I can browse and buy products","608","Login form validation","","2026-11-22","passed","2026-11-22","","","",""
 "As a logged-in shopper
 I want to manage my cart and check out
-So that I can complete a purchase","1124","Sort products","","2026-11-21","passed","2026-11-21","","","",""
-"As a shopper on Swag Labs (saucedemo.com)
-I want to log in with my account
-So that I can browse and buy products","1066","Locked-out user is rejected","","2026-11-21","passed","2026-11-21","","","",""
+So that I can complete a purchase","1758","Remove a product from the cart","","2026-11-22","passed","2026-11-22","","","",""
+"As a logged-in shopper
+I want to manage my cart and check out
+So that I can complete a purchase","897","Sort products","","2026-11-22","passed","2026-11-22","","","",""
 "As a QA engineer validating a generative AI summarization feature
 I want every recorded model answer scored by deterministic evaluators
-So that hallucinations, PII leaks, and prompt injections are caught before release","8","Unsafe answers are caught by the right check","","2026-11-21","passed","2026-11-21","","","",""
-"As a QA engineer validating a generative AI summarization feature
-I want every recorded model answer scored by deterministic evaluators
-So that hallucinations, PII leaks, and prompt injections are caught before release","6","Structured output must be valid JSON with the agreed keys","","2026-11-21","passed","2026-11-21","","","",""
-"As a logged-in shopper
-I want to manage my cart and check out
-So that I can complete a purchase","1175","Sort products","","2026-11-21","passed","2026-11-21","","","",""
-"As a logged-in shopper
-I want to manage my cart and check out
-So that I can complete a purchase","644","Complete checkout with two products","","2026-11-21","passed","2026-11-21","","","",""
+So that hallucinations, PII leaks, and prompt injections are caught before release","6","Unsafe answers are caught by the right check","","2026-11-22","passed","2026-11-22","","","",""
 "As the owner of a QA portfolio
 I want its interactive features covered by automated tests
-So that the site I send to recruiters always works","4847","The AI evaluator scores model answers correctly","","2026-11-21","passed","2026-11-21","","","",""
-"As a shopper on Swag Labs (saucedemo.com)
-I want to log in with my account
-So that I can browse and buy products","1242","Login form validation","","2026-11-21","passed","2026-11-21","","","",""
+So that the site I send to recruiters always works","6917","The AI evaluator scores model answers correctly","","2026-11-22","passed","2026-11-22","","","",""
 "As a logged-in shopper
 I want to manage my cart and check out
-So that I can complete a purchase","1637","Checkout requires a first name","","2026-11-21","passed","2026-11-21","","","",""
+So that I can complete a purchase","520","Checkout requires a first name","","2026-11-22","passed","2026-11-22","","","",""
 "As the owner of a QA portfolio
 I want its interactive features covered by automated tests
-So that the site I send to recruiters always works","1153","Theme preference can be switched","","2026-11-21","passed","2026-11-21","","","",""
+So that the site I send to recruiters always works","617","Home page loads with a single main heading and navigation","","2026-11-22","passed","2026-11-22","","","",""
 "As a QA engineer validating a generative AI summarization feature
 I want every recorded model answer scored by deterministic evaluators
-So that hallucinations, PII leaks, and prompt injections are caught before release","6","Unsafe answers are caught by the right check","","2026-11-21","passed","2026-11-21","","","",""
-"As a QA engineer validating a generative AI summarization feature
-I want every recorded model answer scored by deterministic evaluators
-So that hallucinations, PII leaks, and prompt injections are caught before release","4","Unsafe answers are caught by the right check","","2026-11-21","passed","2026-11-21","","","",""
-"As a QA engineer validating a generative AI summarization feature
-I want every recorded model answer scored by deterministic evaluators
-So that hallucinations, PII leaks, and prompt injections are caught before release","7","Unsafe answers are caught by the right check","","2026-11-21","passed","2026-11-21","","","",""
+So that hallucinations, PII leaks, and prompt injections are caught before release","6","Unsafe answers are caught by the right check","","2026-11-22","passed","2026-11-22","","","",""
+"As a logged-in shopper
+I want to manage my cart and check out
+So that I can complete a purchase","1730","Sort products","","2026-11-22","passed","2026-11-22","","","",""
+"As a logged-in shopper
+I want to manage my cart and check out
+So that I can complete a purchase","769","Complete checkout with two products","","2026-11-22","passed","2026-11-22","","","",""
+"As a logged-in shopper
+I want to manage my cart and check out
+So that I can complete a purchase","779","Checkout requires a first name","","2026-11-22","passed","2026-11-22","","","",""
+"As the owner of a QA portfolio
+I want its interactive features covered by automated tests
+So that the site I send to recruiters always works","907","The terminal answers commands","","2026-11-22","passed","2026-11-22","","","",""
+"As a shopper on Swag Labs (saucedemo.com)
+I want to log in with my account
+So that I can browse and buy products","743","Login form validation","","2026-11-22","passed","2026-11-22","","","",""
+"As a shopper on Swag Labs (saucedemo.com)
+I want to log in with my account
+So that I can browse and buy products","2294","Login form validation","","2026-11-22","passed","2026-11-22","","","",""
+"As the owner of a QA portfolio
+I want its interactive features covered by automated tests
+So that the site I send to recruiters always works","6733","The AI evaluator scores model answers correctly","","2026-11-22","passed","2026-11-22","","","",""
+"As a logged-in shopper
+I want to manage my cart and check out
+So that I can complete a purchase","1363","Sort products","","2026-11-22","passed","2026-11-22","","","",""
+"As a logged-in shopper
+I want to manage my cart and check out
+So that I can complete a purchase","1471","Sort products","","2026-11-22","passed","2026-11-22","","","",""
+"As a shopper on Swag Labs (saucedemo.com)
+I want to log in with my account
+So that I can browse and buy products","772","Locked-out user is rejected","","2026-11-22","passed","2026-11-22","","","",""
 "As a client of the posts service (jsonplaceholder.typicode.com)
 I want its endpoints to honour their contract
-So that consumers can rely on status codes, schemas, and response times","54","Unknown resources return 404","","2026-11-21","passed","2026-11-21","","","",""
-"As a logged-in shopper
-I want to manage my cart and check out
-So that I can complete a purchase","681","Sort products","","2026-11-21","passed","2026-11-21","","","",""
-"As the owner of a QA portfolio
-I want its interactive features covered by automated tests
-So that the site I send to recruiters always works","3628","Theme preference can be switched","","2026-11-21","passed","2026-11-21","","","",""
-"As a shopper on Swag Labs (saucedemo.com)
-I want to log in with my account
-So that I can browse and buy products","613","Locked-out user is rejected","","2026-11-21","passed","2026-11-21","","","",""
+So that consumers can rely on status codes, schemas, and response times","133","Unknown resources return 404","","2026-11-22","passed","2026-11-22","","","",""
 "As a client of the posts service (jsonplaceholder.typicode.com)
 I want its endpoints to honour their contract
-So that consumers can rely on status codes, schemas, and response times","18","Create a post","","2026-11-21","passed","2026-11-21","","","",""
-"As the owner of a QA portfolio
-I want its interactive features covered by automated tests
-So that the site I send to recruiters always works","2648","The AI evaluator scores model answers correctly","","2026-11-21","passed","2026-11-21","","","",""
-"As the owner of a QA portfolio
-I want its interactive features covered by automated tests
-So that the site I send to recruiters always works","5072","The AI evaluator scores model answers correctly","","2026-11-21","passed","2026-11-21","","","",""
-"As the owner of a QA portfolio
-I want its interactive features covered by automated tests
-So that the site I send to recruiters always works","2535","The AI evaluator scores model answers correctly","","2026-11-21","passed","2026-11-21","","","",""
-"As a logged-in shopper
-I want to manage my cart and check out
-So that I can complete a purchase","1356","Sort products","","2026-11-21","passed","2026-11-21","","","",""
-"As a logged-in shopper
-I want to manage my cart and check out
-So that I can complete a purchase","1155","Remove a product from the cart","","2026-11-21","passed","2026-11-21","","","",""
+So that consumers can rely on status codes, schemas, and response times","125","Create a post","","2026-11-22","passed","2026-11-22","","","",""
+"As a QA engineer validating a generative AI summarization feature
+I want every recorded model answer scored by deterministic evaluators
+So that hallucinations, PII leaks, and prompt injections are caught before release","4","Structured output must be valid JSON with the agreed keys","","2026-11-22","passed","2026-11-22","","","",""
 "As a shopper on Swag Labs (saucedemo.com)
 I want to log in with my account
-So that I can browse and buy products","673","Login form validation","","2026-11-21","passed","2026-11-21","","","",""
-"As a logged-in shopper
-I want to manage my cart and check out
-So that I can complete a purchase","1067","Sort products","","2026-11-21","passed","2026-11-21","","","",""
-"As a logged-in shopper
-I want to manage my cart and check out
-So that I can complete a purchase","570","Add a product to the cart","","2026-11-21","passed","2026-11-21","","","",""
-"As a shopper on Swag Labs (saucedemo.com)
-I want to log in with my account
-So that I can browse and buy products","882","Login form validation","","2026-11-21","passed","2026-11-21","","","",""
-"As a logged-in shopper
-I want to manage my cart and check out
-So that I can complete a purchase","1340","Sort products","","2026-11-21","passed","2026-11-21","","","",""
-"As a shopper on Swag Labs (saucedemo.com)
-I want to log in with my account
-So that I can browse and buy products","857","Login form validation","","2026-11-21","passed","2026-11-21","","","",""
-"As a logged-in shopper
-I want to manage my cart and check out
-So that I can complete a purchase","1599","Sort products","","2026-11-21","passed","2026-11-21","","","",""
+So that I can browse and buy products","779","Login form validation","","2026-11-22","passed","2026-11-22","","","",""
 "As the owner of a QA portfolio
 I want its interactive features covered by automated tests
-So that the site I send to recruiters always works","3223","The AI evaluator scores model answers correctly","","2026-11-21","passed","2026-11-21","","","",""
+So that the site I send to recruiters always works","4918","Theme preference can be switched","","2026-11-22","passed","2026-11-22","","","",""
 "As a logged-in shopper
 I want to manage my cart and check out
-So that I can complete a purchase","970","Sort products","","2026-11-21","passed","2026-11-21","","","",""
+So that I can complete a purchase","1343","Sort products","","2026-11-22","passed","2026-11-22","","","",""
+"As a logged-in shopper
+I want to manage my cart and check out
+So that I can complete a purchase","993","Remove a product from the cart","","2026-11-22","passed","2026-11-22","","","",""
 "As the owner of a QA portfolio
 I want its interactive features covered by automated tests
-So that the site I send to recruiters always works","2373","The AI evaluator scores model answers correctly","","2026-11-21","passed","2026-11-21","","","",""
+So that the site I send to recruiters always works","2878","The AI evaluator scores model answers correctly","","2026-11-22","passed","2026-11-22","","","",""
+"As the owner of a QA portfolio
+I want its interactive features covered by automated tests
+So that the site I send to recruiters always works","4597","The AI evaluator scores model answers correctly","","2026-11-22","passed","2026-11-22","","","",""
 "As a logged-in shopper
 I want to manage my cart and check out
-So that I can complete a purchase","836","Sort products","","2026-11-21","passed","2026-11-21","","","",""
+So that I can complete a purchase","1726","Sort products","","2026-11-22","passed","2026-11-22","","","",""
+"As a QA engineer validating a generative AI summarization feature
+I want every recorded model answer scored by deterministic evaluators
+So that hallucinations, PII leaks, and prompt injections are caught before release","3","Unsafe answers are caught by the right check","","2026-11-22","passed","2026-11-22","","","",""
+"As the owner of a QA portfolio
+I want its interactive features covered by automated tests
+So that the site I send to recruiters always works","2148","The AI evaluator scores model answers correctly","","2026-11-22","passed","2026-11-22","","","",""
+"As a QA engineer validating a generative AI summarization feature
+I want every recorded model answer scored by deterministic evaluators
+So that hallucinations, PII leaks, and prompt injections are caught before release","3","Structured output must be valid JSON with the agreed keys","","2026-11-22","passed","2026-11-22","","","",""
+"As a logged-in shopper
+I want to manage my cart and check out
+So that I can complete a purchase","937","Sort products","","2026-11-22","passed","2026-11-22","","","",""
+"As a shopper on Swag Labs (saucedemo.com)
+I want to log in with my account
+So that I can browse and buy products","1057","Locked-out user is rejected","","2026-11-22","passed","2026-11-22","","","",""
+"As a logged-in shopper
+I want to manage my cart and check out
+So that I can complete a purchase","1681","Checkout requires a first name","","2026-11-22","passed","2026-11-22","","","",""
+"As a QA engineer validating a generative AI summarization feature
+I want every recorded model answer scored by deterministic evaluators
+So that hallucinations, PII leaks, and prompt injections are caught before release","5","Unsafe answers are caught by the right check","","2026-11-22","passed","2026-11-22","","","",""
+"As the owner of a QA portfolio
+I want its interactive features covered by automated tests
+So that the site I send to recruiters always works","726","Theme preference can be switched","","2026-11-22","passed","2026-11-22","","","",""
+"As a logged-in shopper
+I want to manage my cart and check out
+So that I can complete a purchase","686","Add a product to the cart","","2026-11-22","passed","2026-11-22","","","",""
+"As a shopper on Swag Labs (saucedemo.com)
+I want to log in with my account
+So that I can browse and buy products","554","Login form validation","","2026-11-22","passed","2026-11-22","","","",""
+"As a logged-in shopper
+I want to manage my cart and check out
+So that I can complete a purchase","1793","Sort products","","2026-11-22","passed","2026-11-22","","","",""
+"As the owner of a QA portfolio
+I want its interactive features covered by automated tests
+So that the site I send to recruiters always works","3885","The AI evaluator scores model answers correctly","","2026-11-22","passed","2026-11-22","","","",""
+"As a shopper on Swag Labs (saucedemo.com)
+I want to log in with my account
+So that I can browse and buy products","1308","Locked-out user is rejected","","2026-11-22","passed","2026-11-22","","","",""
+"As a logged-in shopper
+I want to manage my cart and check out
+So that I can complete a purchase","2392","Remove a product from the cart","","2026-11-22","passed","2026-11-22","","","",""
+"As a logged-in shopper
+I want to manage my cart and check out
+So that I can complete a purchase","805","Sort products","","2026-11-22","passed","2026-11-22","","","",""
+"As a QA engineer validating a generative AI summarization feature
+I want every recorded model answer scored by deterministic evaluators
+So that hallucinations, PII leaks, and prompt injections are caught before release","3","Unsafe answers are caught by the right check","","2026-11-22","passed","2026-11-22","","","",""
+"As a shopper on Swag Labs (saucedemo.com)
+I want to log in with my account
+So that I can browse and buy products","1043","Login form validation","","2026-11-22","passed","2026-11-22","","","",""
+"As the owner of a QA portfolio
+I want its interactive features covered by automated tests
+So that the site I send to recruiters always works","2917","The in-page release suite passes","","2026-11-22","passed","2026-11-22","","","",""
+"As the owner of a QA portfolio
+I want its interactive features covered by automated tests
+So that the site I send to recruiters always works","2327","The AI evaluator scores model answers correctly","","2026-11-22","passed","2026-11-22","","","",""
+"As a shopper on Swag Labs (saucedemo.com)
+I want to log in with my account
+So that I can browse and buy products","1062","Login form validation","","2026-11-22","passed","2026-11-22","","","",""
 "As a client of the posts service (jsonplaceholder.typicode.com)
 I want its endpoints to honour their contract
-So that consumers can rely on status codes, schemas, and response times","14","Unknown resources return 404","","2026-11-21","passed","2026-11-21","","","",""
-"As a QA engineer validating a generative AI summarization feature
-I want every recorded model answer scored by deterministic evaluators
-So that hallucinations, PII leaks, and prompt injections are caught before release","5","A faithful summary passes every check","","2026-11-21","passed","2026-11-21","","","",""
-"As a shopper on Swag Labs (saucedemo.com)
-I want to log in with my account
-So that I can browse and buy products","228","Standard user logs in successfully","","2026-11-21","passed","2026-11-21","","","",""
-"As a QA engineer validating a generative AI summarization feature
-I want every recorded model answer scored by deterministic evaluators
-So that hallucinations, PII leaks, and prompt injections are caught before release","8","Unsafe answers are caught by the right check","","2026-11-21","passed","2026-11-21","","","",""
+So that consumers can rely on status codes, schemas, and response times","63","List posts for a user","","2026-11-22","passed","2026-11-22","","","",""
 "As the owner of a QA portfolio
 I want its interactive features covered by automated tests
-So that the site I send to recruiters always works","2215","The AI evaluator scores model answers correctly","","2026-11-21","passed","2026-11-21","","","",""
-"As a logged-in shopper
-I want to manage my cart and check out
-So that I can complete a purchase","1210","Remove a product from the cart","","2026-11-21","passed","2026-11-21","","","",""
-"As the owner of a QA portfolio
-I want its interactive features covered by automated tests
-So that the site I send to recruiters always works","2036","Theme preference can be switched","","2026-11-21","passed","2026-11-21","","","",""
-"As the owner of a QA portfolio
-I want its interactive features covered by automated tests
-So that the site I send to recruiters always works","2887","The in-page release suite passes","","2026-11-21","passed","2026-11-21","","","",""
-"As the owner of a QA portfolio
-I want its interactive features covered by automated tests
-So that the site I send to recruiters always works","2453","The AI evaluator scores model answers correctly","","2026-11-21","passed","2026-11-21","","","",""
-"As a shopper on Swag Labs (saucedemo.com)
-I want to log in with my account
-So that I can browse and buy products","994","Locked-out user is rejected","","2026-11-21","passed","2026-11-21","","","",""
-"As a QA engineer validating a generative AI summarization feature
-I want every recorded model answer scored by deterministic evaluators
-So that hallucinations, PII leaks, and prompt injections are caught before release","6","Structured output must be valid JSON with the agreed keys","","2026-11-21","passed","2026-11-21","","","",""
-"As the owner of a QA portfolio
-I want its interactive features covered by automated tests
-So that the site I send to recruiters always works","1057","The terminal answers commands","","2026-11-21","passed","2026-11-21","","","",""
+So that the site I send to recruiters always works","2907","The AI evaluator scores model answers correctly","","2026-11-22","passed","2026-11-22","","","",""
